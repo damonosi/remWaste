@@ -1,0 +1,3 @@
+ site  :  https://wewantwaste.co.uk/
+ code:  LE10 1SH , then select garden waste. On the next page you will see a skip select pag
+ data : https://app.wewantwaste.co.uk/api/skips/by-location?postcode=NR32&area=Lowestoft
