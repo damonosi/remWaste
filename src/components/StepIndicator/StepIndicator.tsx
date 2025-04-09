@@ -14,7 +14,7 @@ const StepIndicator = () => {
 
   return (
     <div
-      className={`grid grid-rows-1 grid-flow-col grid-cols-${lastStep + 1} w-full justify-between h-fit `}
+      className={`flex flex-col gap-6 md:gap-0 lg:grid grid-rows-1 lg:grid-rows-1 grid-flow-col grid-cols-${lastStep + 1} w-full justify-between h-fit `}
     >
       {stepData.map(({ text, checked, sign, currentStep }, index) => {
         return (
@@ -45,10 +45,10 @@ const StepIndicator = () => {
                   <>
                     {currentStep ? (
                       <>
-                        <div className="w-16 h-px my-auto  bg-white/80 opacit-50 z-50" />
+                        <div className="lg:w-16 lg:h-px my-auto  bg-white/80 opacit-50 z-50" />
                       </>
                     ) : (
-                      <div className="w-16 h-px my-auto flex bg-[#0037C1] " />
+                      <div className="lg:w-16 lg:h-px my-auto flex bg-[#0037C1] " />
                     )}
                   </>
                 ) : (
@@ -67,7 +67,7 @@ const StepIndicator = () => {
                   </span>
                 </button>
                 {index !== lastStep ? (
-                  <div className="w-16 h-px my-auto bg-white/60 opacit-50" />
+                  <div className="lg:w-16 lg:h-px my-auto bg-white/60 opacit-50" />
                 ) : (
                   ""
                 )}
