@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { DataState, fetchData } from "../../../redux/slices/dataSlice";
-import { AppDispatch, IRootState } from "../../../redux/store";
+import { DataState, fetchData } from "../../redux/slices/dataSlice";
+import { AppDispatch, IRootState } from "../../redux/store";
 import Skip from "./Skip";
 
 const SkipsContainer = () => {

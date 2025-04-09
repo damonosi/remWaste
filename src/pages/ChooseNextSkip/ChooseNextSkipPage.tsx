@@ -1,4 +1,4 @@
-import SkipsContainer from "../../components/StepIndicator/Skips/SkipsContainer";
+import SkipsContainer from "../../components/Skips/SkipsContainer";
 
 const ChooseNextSkipPage = () => {
   return (
