@@ -22,42 +22,40 @@ const SkipsContainer = () => {
       {loading ? (
         "Loading..."
       ) : (
-        <>
-          <div className="grid grid-cols-3 w-full gap-5">
-            {skips.data.map(
-              ({
-                id,
-                allowed_on_road,
-                allows_heavy_waste,
-                area,
-                forbidden,
-                hire_period_days,
-                per_tonne_cost,
-                postcode,
-                price_before_vat,
-                size,
-                transport_cost,
-                vat,
-              }) => (
-                <Skip
-                  key={id}
-                  id={id}
-                  allowed_on_road={allowed_on_road}
-                  allows_heavy_waste={allows_heavy_waste}
-                  area={area}
-                  forbidden={forbidden}
-                  hire_period_days={hire_period_days}
-                  per_tonne_cost={per_tonne_cost}
-                  postcode={postcode}
-                  price_before_vat={price_before_vat}
-                  size={size}
-                  transport_cost={transport_cost}
-                  vat={vat}
-                />
-              ),
-            )}
-          </div>
-        </>
+        <div className="grid grid-cols-3 w-full gap-5">
+          {skips.data.map(
+            ({
+              id,
+              allowed_on_road,
+              allows_heavy_waste,
+              area,
+              forbidden,
+              hire_period_days,
+              per_tonne_cost,
+              postcode,
+              price_before_vat,
+              size,
+              transport_cost,
+              vat,
+            }) => (
+              <Skip
+                key={id}
+                id={id}
+                allowed_on_road={allowed_on_road}
+                allows_heavy_waste={allows_heavy_waste}
+                area={area}
+                forbidden={forbidden}
+                hire_period_days={hire_period_days}
+                per_tonne_cost={per_tonne_cost}
+                postcode={postcode}
+                price_before_vat={price_before_vat}
+                size={size}
+                transport_cost={transport_cost}
+                vat={vat}
+              />
+            ),
+          )}
+        </div>
       )}
 
       <Skip />
