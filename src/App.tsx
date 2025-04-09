@@ -1,4 +1,5 @@
 import "./App.css";
+
 import StepIndicator from "./components/StepIndicator/StepIndicator";
 import ChooseNextSkipPage from "./pages/ChooseNextSkip/ChooseNextSkipPage";
 

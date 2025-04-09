@@ -1,6 +1,6 @@
 import stepData from "./indicatorData";
 
-const StepMask = ({ className }: { className?: string }) => {
+export const StepMask = ({ className }: { className?: string }) => {
   return (
     <div
       id="mask"

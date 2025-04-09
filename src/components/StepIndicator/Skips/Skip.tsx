@@ -17,20 +17,23 @@ interface skipData {
 
   vat?: number;
 }
-
+const ButtonMask = ({ className }: { className?: string }) => {
+  return (
+    <div
+      id="mask"
+      className={` absolute rounded-full z-0 bg-[#0037C1] h-0 ease-in-out duration-1000 group-hover/button:h-full left-0 right-0 bottom-0 opacity-70  ${className}`}
+    ></div>
+  );
+};
 const Skip = ({
   id,
   allowed_on_road,
   allows_heavy_waste,
-  area,
-  forbidden,
+
   hire_period_days,
-  per_tonne_cost,
-  postcode,
+
   price_before_vat,
   size,
-  transport_cost,
-  vat,
 }: skipData) => {
   const [hovered, setHovered] = useState(false);
   const handleMouseEnter = () => {
@@ -39,7 +42,7 @@ const Skip = ({
   const handleMouseLeave = () => {
     setHovered(false);
   };
-  console.log(allows_heavy_waste);
+
   return (
     <>
       {id ? (
@@ -67,7 +70,7 @@ const Skip = ({
             ""
           ) : (
             <div
-              className={`text-xl  rounded-4xl px-4 py-2 bg-[#FB4D3D] mb-5 mx-11 text-white text-bold absolute flex flex-col justrify-start items-start gap-4 bottom-0 z-100 ${allows_heavy_waste && " group-hover:translate-y-[3rem] transition-transform duration-500"}  `}
+              className={`text-xl  rounded-4xl px-4 py-2 bg-[#FB4D3D] mb-5 mx-11 text-white text-bold absolute flex flex-col justrify-start items-start gap-4 bottom-0 z-100 ${allows_heavy_waste && " group-hover:translate-y-[12rem] transition-transform duration-500"}  `}
             >
               <span className="flex flex-row justify-center items-center">
                 {" "}
@@ -122,13 +125,17 @@ const Skip = ({
                   </span>
                 </div>
                 <button
-                  className={`z-50  flex h-fit w-fit overflow-visible   bg-transparent pl-0 text-sm font-light normal-case text-gri-bg shadow-none hover:scale-95 hover:shadow-none md:text-base ${
+                  onClick={() => console.log("send to PermitCheck")}
+                  className={` z-50 group/button border relative flex justify-center rounded-full px-6 py-2  items-center h-fit w-fit overflow-visible   bg-transparent  text-sm font-light normal-case text-gri-bg shadow-none hover:scale-95 hover:shadow-none md:text-base ${
                     hovered && ""
                   }`}
                 >
-                  <span className={`${hovered && "text-alb-site"}`}>
+                  <span
+                    className={`w-full cursor-pointer flex z-50 ${hovered && "text-alb-site"}`}
+                  >
                     Select this skip
                   </span>
+                  <ButtonMask />
                 </button>
               </div>
             </motion.div>
